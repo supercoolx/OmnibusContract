@@ -1,0 +1,46 @@
+{
+  "name": "omnibuscontract",
+  "version": "1.0.0",
+  "description": "This contract uses Omnibus Model.",
+  "main": "index.js",
+  "scripts": {
+    "test": "truffle test",
+    "generate-types": "npx typechain --target=truffle-v5 'build/contracts/*.json'",
+    "postinstall": "npx truffle compile && npm run generate-types",
+    "lint": "solhint ./contracts/allowlist-contract.sol --fix",
+    "prepare": "husky install",
+    "prettier:solidity": "prettier --write ./*.sol"
+  },
+  "keywords": [
+    "omnibus",
+    "contract"
+  ],
+  "author": "juliette",
+  "license": "MIT",
+  "dependencies": {
+    "hardhat": "^2.6.8",
+    "truffle": "^5.4.22"
+  },
+  "devDependencies": {
+    "@openzeppelin/contracts": "^4.3.3",
+    "@openzeppelin/test-helpers": "^0.5.15",
+    "@typechain/ethers-v5": "^8.0.4",
+    "@typechain/hardhat": "^3.0.0",
+    "@typechain/truffle-v5": "^6.0.0",
+    "@types/bignumber.js": "^5.0.0",
+    "@types/bn.js": "^5.1.0",
+    "@types/chai": "^4.2.22",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.11.10",
+    "@types/web3": "^1.2.2",
+    "husky": "^7.0.0",
+    "prettier": "^2.5.0",
+    "prettier-plugin-solidity": "^1.0.0-beta.19",
+    "solhint": "^3.2.0",
+    "solhint-plugin-prettier": "^0.0.5",
+    "ts-generator": "^0.1.1",
+    "ts-node": "^10.4.0",
+    "typechain": "^6.0.4",
+    "typescript": "^4.5.2"
+  }
+}
