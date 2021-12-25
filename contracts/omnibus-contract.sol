@@ -21,7 +21,7 @@ contract OmniBus is Ownable {
         address receiver; // recipient when transfer, or become 0x00 address when selling or buying
     }
     struct Account {
-        // uint256 status; // represents status of account(active or deactivated)
+        uint256 status; // represents status of account(active or deactivated)
         mapping(address => Hold[]) holds; // the holds on a specific token
         mapping(address => uint256) balances; // confirmed balance of the token
         address[] tokens; // a list of tokens by the account
